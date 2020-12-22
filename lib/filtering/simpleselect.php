@@ -131,7 +131,8 @@ class generalized_filter_simpleselect extends generalized_filter_type {
     function check_data($formdata) {
         $field = $this->_uniqueid;
 
-        if (array_key_exists($field, $formdata)) {
+	//if (array_key_exists($field, $formdata)) { - (aj) changed to isset()
+	if (isset($field, $formdata)) {
             $value = $formdata->$field;
 
             if ($this->_multiple && is_array($value)) {

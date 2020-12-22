@@ -125,7 +125,8 @@ class generalized_filter_dependentselect extends generalized_filter_type {
     function check_data($formdata) {
         $field    = $this->_uniqueid;
 
-        if (array_key_exists($field, $formdata)) {
+	//if (array_key_exists($field, $formdata)) { - (aj) Change function to isset()
+	if (isset($field, $formdata)) {
             $value = $formdata->$field;
 
             if (is_array($value)) {

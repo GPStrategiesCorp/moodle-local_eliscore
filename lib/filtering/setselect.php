@@ -106,7 +106,7 @@ class generalized_filter_setselect extends generalized_filter_type {
     function check_data($formdata) {
         $field = $this->_uniqueid;
 
-        if (array_key_exists($field, $formdata) and $formdata->$field !== '') {
+        if (isset($field, $formdata) and $formdata->$field !== '') {
             $value = $formdata->$field;
             if (isset($this->_anyvalue) && $formdata->$field === '0') {
                 $value = $this->_anyvalue;

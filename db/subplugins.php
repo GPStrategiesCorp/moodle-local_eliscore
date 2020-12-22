@@ -23,9 +23,12 @@
  *
  */
 
-defined('MOODLE_INTERNAL') || die();
+//defined('MOODLE_INTERNAL') || die();
 
-$subplugins = array(
+$subplugins = (array) json_decode(file_get_contents(__DIR__ . "/subplugins.json"))->plugintypes;
+
+/*$subplugins = array(
     'elisfields' => 'local/eliscore/fields',
     'eliscore' => 'local/eliscore/plugins',
 );
+*/

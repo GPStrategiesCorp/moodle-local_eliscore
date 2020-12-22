@@ -1,0 +1,6 @@
+{
+    "plugintypes": {
+	"elisfields": "local/eliscore/fields",
+    	"eliscore": "local/eliscore/plugins"
+    }
+}
